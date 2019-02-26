@@ -1,0 +1,60 @@
+h1 {
+		text-align: center;
+		margin: 0;
+	}
+
+body {
+		font-family: Arial; background: #e6e6e6; color: black;
+	}
+
+table, th, td {
+		border: 1px solid black;
+		border-collapse: collapse;
+		text-align: left;
+	}
+	
+th {
+		text-align: left; font-style: italic; background: #8c8c8c; border: 1px solid black;
+	}
+
+img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 20%;
+	}
+
+.menuList {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		background: #8c8c8c;
+	}
+.menuItem {
+	float: left;
+	border-right:1px solid black;
+}
+
+.menuItem a{
+		display: block;
+		color: black;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+}
+
+.menuItem a:hover {
+	background-color: #666666;
+}
+
+.activeMenu a{
+		float: left;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		background-color: black;
+		border-right:1px solid black;
+}
