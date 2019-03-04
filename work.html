@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="site.css">
+	<link rel="shortcut icon" href="logo.png"/>
 	<title>Past Work</title>
 </head>
 <body>
@@ -16,16 +17,19 @@
 	
 	<div class="textContent">
 		<h1>Code Examples</h1>
-		<p1 class="snippetText">
+		<p>
 			Several examples of my code can be found <a href="https://github.com/trinilime?tab=repositories">on my Github.</a> I am fairly new to using GitHub repositories; 
 			however, I have been trying to add some of my code for reference as of late.<br>
 			<h4>Included below are a couple snippets of code from various projects that you can click on to view.</h4>
-		</p1>
-		<p2>
-			The following code comes from a project from my C# class in the Fall of 2018. It uses Windows Forms and this class to create an ammortization schedule.
+		</p>
+		<p>
+			The following code comes from a project from my C# class in the Fall of 2018. It uses Windows Forms and this class to create an ammortization schedule. 
 		</p2><br><br>
 		
-		<button onclick="showClip(1)">Click here to show code</button>
+		<div style="text-align:center;">
+			<button onclick="showClip(1)" class="snippetBtn">Click here to show code</button>
+		</div>
+		
 		<div id="clip1" style="display:none;">
 			<p style="margin-bottom: .0001pt; line-height: normal; text-autospace: none;"><span style="font-size: 9.5pt; font-family: Consolas; color: blue;">using</span><span style="font-size: 9.5pt; font-family: Consolas; color: black;"> System;</span></p>
 			<p style="margin-bottom: .0001pt; line-height: normal; text-autospace: none;"><span style="font-size: 9.5pt; font-family: Consolas; color: blue;">using</span><span style="font-size: 9.5pt; font-family: Consolas; color: black;"> System.Collections.Generic;</span></p>
@@ -163,11 +167,15 @@
 			<p style="margin-bottom: .0001pt;"><span style="font-size: 9.5pt; line-height: 107%; font-family: Consolas; color: black;">}</span></p>
 		</div>
 		<hr style="height:2px;border:none;background-color:black;"><br>
-		<p3>
-			The following code comes from a simple matching game I am working on in Java. It has a preset solution that the user tries to guess by matching letters in pairs.
-		</p3><br><br>
 		
-		<button onclick="showClip(2)">Click here to show code</button>
+		<p>
+			The following code comes from a simple matching game I am working on in Java. It has a preset solution that the user tries to guess by matching letters in pairs.
+		</p><br><br>
+		
+		<div style="text-align:center;">
+			<button onclick="showClip(2)" class="snippetBtn">Click here to show code</button>
+		</div>
+		
 		<div id="clip2" style="display:none;">
 			<h4>Board Class</h4>
 			<p><br />public class Board {</p>
@@ -177,7 +185,45 @@
 			<p>public class Match {</p>
 			<p>public static void main (String[] args) {<br />Board test = new Board();<br />int run = 0;<br />char cont;<br />Scanner input = new Scanner(System.in);<br /><br />GamePiece[][] pieces = test.createGame();<br /><br /><br />System.out.println("Enter coordinates to turn over two objects.");<br />while (run &lt; 8) {<br />test.printBoard(pieces);<br /><br />System.out.print("X1: ");<br />int x1 = input.nextInt();<br /><br />System.out.print("Y1: ");<br />int y1 = input.nextInt();<br /><br />System.out.print("X2: ");<br />int x2 = input.nextInt();<br /><br />System.out.print("Y2: ");<br />int y2 = input.nextInt();<br />System.out.println();<br /><br />test.printSpaces();<br />if (pieces[x1][y1].getMatched() || pieces[x2][y2].getMatched()) {<br />test.printSpaces();<br />System.out.println("YOU ALREADY MATCHED THOSE.");<br />}<br />else if (pieces[x1][y1].getDisplay() == pieces[x2][y2].getDisplay()) {<br />test.printSpaces();<br />System.out.println("MATCH. PLEASE CONTINUE.");<br />run++;<br />pieces[x1][y1].match();<br />pieces[x2][y2].match();<br />test.updateBoard(pieces, x1, y1, x2, y2);<br />test.printBoard(pieces);<br />cont = input.next().charAt(0);<br />test.printSpaces();<br />}<br /><br />else {<br />System.out.println("NO MATCH. PLEASE CONTINUE");<br />test.printTempBoard(pieces, x1, y1, x2, y2);<br />cont = input.next().charAt(0);<br />test.reverseBoard(pieces, x1, y1, x2, y2);<br />test.printSpaces();<br />}<br /><br /><br />}<br />for (int i = 0; i &lt; 10; i++) {<br />System.out.println();<br />}<br />System.out.println("YOU WIN!!");<br /><br /><br />input.close();<br />}<br />}</p>
 		</div>
-		<hr style="height:2px;border:none;background-color:black;">
+		<hr style="height:2px;border:none;background-color:black;"><br>
+		
+		<p>
+			This code is from an assignment where I was tasked with implementing a Doubly Linked List in C#. The following code contains a Node class in addition to a DoublyLinkedList class.
+		</p><br><br>
+		
+		
+		<div style="text-align:center;">
+			<button onclick="showClip(3)" class="snippetBtn">Click here to show code</button>
+		</div>
+	
+		<div id="clip3" style="display:none;">
+			<h4>Doubly Linked List Class</h4>
+			<p>using System;<br />using System.Collections.Generic;<br />using System.Linq;<br />using System.Text;<br />using System.Threading.Tasks;</p>
+			<p>namespace Project3<br />{<br />class DoublyLinkedList<br />{<br />private Node head = null;</p>
+			<p>// Insert node at the beginning of the list<br />public void InsertFirst(DoublyLinkedList list, double input)<br />{<br />Node insertedNode = new Node(input);<br />insertedNode.next = list.head;<br />list.head = insertedNode;<br />insertedNode.previous = null;<br />}</p>
+			<p>// Insert node at the end of the list or beginning if the list is empty<br />public void InsertLast(DoublyLinkedList list, double input)<br />{<br />Node insertedNode = new Node(input);<br /><br />if (list.head == null)<br />{<br />list.head = insertedNode;<br />insertedNode.next = null;<br />insertedNode.previous = null;<br />return;<br />}</p>
+			<p>Node lastNode = GetLastNode(list);<br />lastNode.next = insertedNode;<br />insertedNode.next = null;<br />insertedNode.previous = lastNode;<br />}</p>
+			<p>// Insert node after given node if the list isn't empty<br />public void InsertAfter(Node previousNode, double newData)<br />{<br />if (previousNode == null)<br />{<br />return;<br />}</p>
+			<p>Node insertedNode = new Node(newData);<br />Node temp = previousNode.next;<br />insertedNode.next = previousNode.next;<br />previousNode.next = insertedNode;<br />insertedNode.previous = previousNode;<br />temp.previous = insertedNode;<br />}</p>
+			<p>// Return head node<br />public Node GetFirstNode(DoublyLinkedList input) // Returns null if list is empty<br />{<br />Node temp = input.head;</p>
+			<p>if (temp == null)<br />{<br />return null;<br />}</p>
+			<p>return temp;<br />}</p>
+			<p>// Return tail node<br />public Node GetLastNode(DoublyLinkedList input)<br />{<br />Node temp = input.head;</p>
+			<p>while (temp.next != null)<br />{<br />temp = temp.next;<br />}</p>
+			<p>return temp;<br />}</p>
+			<p>// Return number of nodes in list<br />public int GetNumNodes(DoublyLinkedList input)<br />{<br />int count = 0;<br />Node temp = input.head;</p>
+			<p>if (temp == null)<br />{<br />return count;<br />}</p>
+			<p>while (temp != null)<br />{<br />temp = temp.next;<br />count++;<br />}<br />return count;<br />}<br />}</p>
+			<p>}</p>
+			<br>
+			<h4>Node Class</h4>
+			<p>using System;<br />using System.Collections.Generic;<br />using System.Linq;<br />using System.Text;<br />using System.Threading.Tasks;</p>
+			<p>namespace Project3<br />{<br />class Node<br />{<br />public double data;<br />public Node next;<br />public Node previous;</p>
+			<p>// Constructor<br />public Node(double d)<br />{<br />data = d;<br />next = null;<br />previous = null;<br />}<br />}<br />}</p>
+			
+		</div>
+		<hr style="height:2px;border:none;background-color:black;"><br>
+		
 	</div>
 </body>
 </html>
@@ -191,6 +237,9 @@
 		}
 		else if (num == 2) {
 			var x = document.getElementById("clip2");
+		}
+		else if (num == 3) {
+			var x = document.getElementById("clip3");
 		}
 		
 		if (x.style.display === "none") {
