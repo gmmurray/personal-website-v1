@@ -1,5 +1,6 @@
+/* Background pattern from Toptal Subtle Patterns */
 body, html { 
-		background: black;
+		background-image: url("darkhex.png");
 		height: 100%;
 		font-family: Palatino, Charcoal, sans-serif;
 	}
