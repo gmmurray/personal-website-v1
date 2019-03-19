@@ -1,40 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="site.css">
-	<link rel="shortcut icon" href="logo.png"/>
-	<title>Resume</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css\bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="shortcut icon" href="images\shortcut_icon1.png"/>
+	<title>Jacksonville, FL Computing Student</title>
 </head>
-<body>
-	<ol class="menuList">
-		<li class="menuItem"><a href="index.html">Home</a></li>
-		<li class="menuItem"><a href="about.html">About Me</a></li>
-		<li class="activeItem"><a href="resume.html">Resume</a></li>
-		<li class="menuItem"><a href="work.html">Past Work</a></li>
-	</ol>
-	<div class="textContent">
+
+<body class="bg-primary">
+
+	<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+		<img src="images\logo_3.1.png">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+				<a class="nav-link" href=index.html>Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="work.html">My Work</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="resume.html">Resume</a>
+		</ul>
+	</nav>
+
+	<div class="container-fluid bg-light">
 		<h1>Resume</h1>
-		<h4 class="resumeHeading">Education</h3>
+		<h4>Education</h3>
 		<p>
 			<i>University of North Florida</i><br>
 			College of Computing, Engineering, and Construction ABET Accredited<br>
 			Bachelor of Science in Computing & Information Sciences<br>
 			Expected Graduation May 2020<br>
-		</p><br>
+		</p>
 		<p>
 			<i>University of Florida</i><br>
 			College of Liberal Arts and Sciences<br>
 			Bachelor of Arts in Anthropology<br>
 			Graduated May 2018<br>
-		</p><br>
-		<h4 class="resumeHeading";>Education</h4>
-		<ul style="margin:0";>
+		</p>
+		<h4>Skills</h4>
+		<ul>
 			<li>C# Programming</li>
 			<li>Java Programming</li>
 			<li>Microsoft Office Suite</li>
 		</ul><br>
-		<h4 class="resumeHeading">Related Coursework</h4>
-		<ul style="margin:0";>
+		<h4>Related Coursework</h4>
+		<ul>
 			<li>Programming Fundamentals I & II</li>
 			<li>Introduction to Visual and Procedural Programming</li>
 			<li>Introduction to Object-Oriented Programming</li>
@@ -44,7 +60,20 @@
 			<li>Calculus I & II</li>
 			<li>Physics I & II</li>
 			<li>Statistics I</li>
-		</ul><br>
+		</ul>
 	</div>
+
+	<footer class="page-footer font-small bg-dark">
+		<div class="container text-center">
+			<span style="font-size:3em;">
+				<a href="#" class="fab fa-facebook"></a>
+				<a href="#" class="fab fa-instagram"></a>
+				<a href="#" class="fab fa-github"></a>
+			</span>
+		</div>
+  	<div class="footer-copyright text-center py-3">
+			© 2019 Copyright Greg Murray
+  	</div>
+	</footer>
 </body>
 </html>
