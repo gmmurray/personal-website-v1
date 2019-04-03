@@ -10,6 +10,19 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="shortcut icon" href="images\shortcut_icon1.png"/>
 	<title>Jacksonville, FL Computing Student</title>
+	<script>
+		$(document).ready(function(){
+			$("#theme").click(function(){
+				$("#text1").toggleClass('text-dark text-light');
+				$("#sec2").toggleClass('bg-light bg-dark');
+				$("#navbar, #background").toggleClass('bg-white');
+				$("#head1, #head2, #head3").toggleClass('text-light');
+				$("#aBorder1, #aBorder2, #aBorder3").toggleClass('border-dark border-light');
+				$("#card1, #card2, #card3").toggleClass('bg-dark bg-white');
+				$("#theme").toggleClass('text-white text-light');
+			});
+		});
+	</script>
 	<style type="text/css">
 		#topBtn {
 		display: none;
@@ -21,9 +34,9 @@
 	}
     </style>
 </head>
-<body>
+<body id="background">
 	<button class="btn btn-secondary btn-lg fas fa-angle-up" onclick="topFunction()" id="topBtn" title="Return to top of page"></button>
-	<nav class="navbar navbar-expand-sm">
+	<nav id="navbar" class="navbar navbar-expand-sm">
 		<img src="images\logo_3.1.png">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
@@ -34,6 +47,10 @@
 			</li>
 			<li class="nav-item">
 				<a class="nav-link text-primary font-weight-bold" href="work.html">My Work</a>
+			</li>
+			<li class="nav-item">
+				<a id="theme" class="nav-link text-white font-weight-bold" href="#">Theme</a>
+			</li>
 		</ul>
 	</nav>
 
@@ -47,7 +64,7 @@
 
 	<div class="container mt-0 pb-4 pt-4 mt-5 mb-4">
 		<div class="mx-auto" style="width:60%">
-				<p class="text-dark">
+				<p id="text1" class="text-dark">
 					Several examples of my code can be found <a href="https://github.com/gmmurray">on my Github.</a> I am fairly new to using GitHub repositories;
 					however, I have been trying to add some of my code for reference as of late.
 				</p>
@@ -55,13 +72,13 @@
 	</div>
 
 
-	<div class="container-fluid bg-light mt-0 pb-4 pt-4 mt-4">
+	<div id="sec2" class="container-fluid bg-light mt-0 pb-4 pt-4 mt-4">
 		<div class="mx-auto" style="width:60%;">
 			<div id="accordion">
-			  <div class="card border-dark">
+			  <div id="aBorder1" class="card border-dark">
 			    <div class="card-header bg-secondary" id="headingOne">
 			      <h5 class="mb-0">
-			        <button class="btn btn-link text-dark" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+			        <button class="btn btn-link text-white" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 			          Ammortization Class
 			        </button>
 			      </h5>
@@ -71,7 +88,7 @@
 						<p class="bg-primary text-light p-3 mb-0">
 							The following code comes from a project from a C# class I have taken. It uses Windows Forms and this class to create an ammortization schedule.
 						</p2>
-						<div class="card-body bg-dark mt-0">
+						<div id="card1" class="card-body bg-dark mt-0">
 							<p style="margin-bottom: .0001pt; line-height: normal; text-autospace: none;"><span style="font-size: 9.5pt; font-family: Consolas; color: blue;">using</span><span style="font-size: 9.5pt; font-family: Consolas; color: black;"> System;</span></p>
 							<p style="margin-bottom: .0001pt; line-height: normal; text-autospace: none;"><span style="font-size: 9.5pt; font-family: Consolas; color: blue;">using</span><span style="font-size: 9.5pt; font-family: Consolas; color: black;"> System.Collections.Generic;</span></p>
 							<p style="margin-bottom: .0001pt; line-height: normal; text-autospace: none;"><span style="font-size: 9.5pt; font-family: Consolas; color: blue;">using</span><span style="font-size: 9.5pt; font-family: Consolas; color: black;"> System.Linq;</span></p>
@@ -210,10 +227,10 @@
 			    </div>
 			  </div>
 
-			  <div class="card border-dark">
+			  <div id="aBorder2" class="card border-dark">
 			    <div class="card-header bg-secondary" id="headingTwo">
 			      <h5 class="mb-0">
-			        <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+			        <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 			          Matching Game
 			        </button>
 			      </h5>
@@ -222,11 +239,11 @@
 						<p class="bg-primary text-light p-3 mb-0">
 							The following code comes from a simple matching game I am working on in Java. It has a preset solution that the user tries to guess by matching letters in pairs.
 						</p2>
-						<div class="card-body bg-dark mt-0">
-							<h4 class="text-light">Board Class</h4>
+						<div id="card2" class="card-body text-light bg-dark mt-0">
+							<h4>Board Class</h4>
 	 			 			<p><br />public class Board {</p>
 	 			 			<p>final int NUM_SPACES = 16;<br /><br /><br />public GamePiece[][] createGame() {<br />GamePiece[][] boardList = new GamePiece[4][4];<br /><br />GamePiece A1 = new GamePiece('A');<br />boardList[0][0] = A1;<br />GamePiece A2 = new GamePiece('A');<br />boardList[0][3] = A2;<br />GamePiece B1 = new GamePiece('B');<br />boardList[2][1] = B1;<br />GamePiece B2 = new GamePiece('B');<br />boardList[0][1] = B2;<br />GamePiece C1 = new GamePiece('C');<br />boardList[2][2] = C1;<br />GamePiece C2 = new GamePiece('C');<br />boardList[1][0] = C2;<br />GamePiece D1 = new GamePiece('D');<br />boardList[3][1] = D1;<br />GamePiece D2 = new GamePiece('D');<br />boardList[3][3] = D2;<br />GamePiece E1 = new GamePiece('E');<br />boardList[1][3] = E1;<br />GamePiece E2 = new GamePiece('E');<br />boardList[3][2] = E2;<br />GamePiece F1 = new GamePiece('F');<br />boardList[1][2] = F1;<br />GamePiece F2 = new GamePiece('F');<br />boardList[3][0] = F2;<br />GamePiece G1 = new GamePiece('G');<br />boardList[1][1] = G1;<br />GamePiece G2 = new GamePiece('G');<br />boardList[2][3] = G2;<br />GamePiece H1 = new GamePiece('H');<br />boardList[0][2] = H1;<br />GamePiece H2 = new GamePiece('H');<br />boardList[2][0] = H2;<br /><br /><br /><br />return boardList;<br />}<br /><br />public void printBoard(GamePiece[][] temp) {<br />for (int i = 0; i &lt; 4; i++) {<br />for (int j = 0; j&lt; 4; j++) {<br />System.out.print(temp[i][j].getId() + " ");<br />}<br />System.out.println();<br />}<br />}<br /><br />public void printTempBoard(GamePiece[][] temp, int x1, int y1, int x2, int y2) {<br />temp[x1][y1].setId(temp[x1][y1].getDisplay());<br />temp[x2][y2].setId(temp[x2][y2].getDisplay());<br /><br />for (int i = 0; i &lt; 4; i++) {<br />for (int j = 0; j&lt; 4; j++) {<br />System.out.print(temp[i][j].getId() + " ");<br />}<br />System.out.println();<br />}<br />}<br /><br />public void updateBoard(GamePiece[][] temp, int x1, int y1, int x2, int y2) {<br />temp[x1][y1].setId(temp[x1][y1].getDisplay());<br />temp[x2][y2].setId(temp[x2][y2].getDisplay()); <br />}<br /><br />public void reverseBoard(GamePiece[][] temp, int x1, int y1, int x2, int y2) {<br />temp[x1][y1].setId('O');<br />temp[x2][y2].setId('O'); <br />}<br /><br />public void printSpaces() {<br />for (int i = 0; i &lt; 5; i++) {<br />System.out.println();<br />} <br />}<br />}</p>
-	 			 			<h4 class="text-light">Main Method</h4>
+	 			 			<h4>Main Method</h4>
 	 			 			<p>import java.util.Scanner;</p>
 	 			 			<p>public class Match {</p>
 	 			 			<p>public static void main (String[] args) {<br />Board test = new Board();<br />int run = 0;<br />char cont;<br />Scanner input = new Scanner(System.in);<br /><br />GamePiece[][] pieces = test.createGame();<br /><br /><br />System.out.println("Enter coordinates to turn over two objects.");<br />while (run &lt; 8) {<br />test.printBoard(pieces);<br /><br />System.out.print("X1: ");<br />int x1 = input.nextInt();<br /><br />System.out.print("Y1: ");<br />int y1 = input.nextInt();<br /><br />System.out.print("X2: ");<br />int x2 = input.nextInt();<br /><br />System.out.print("Y2: ");<br />int y2 = input.nextInt();<br />System.out.println();<br /><br />test.printSpaces();<br />if (pieces[x1][y1].getMatched() || pieces[x2][y2].getMatched()) {<br />test.printSpaces();<br />System.out.println("YOU ALREADY MATCHED THOSE.");<br />}<br />else if (pieces[x1][y1].getDisplay() == pieces[x2][y2].getDisplay()) {<br />test.printSpaces();<br />System.out.println("MATCH. PLEASE CONTINUE.");<br />run++;<br />pieces[x1][y1].match();<br />pieces[x2][y2].match();<br />test.updateBoard(pieces, x1, y1, x2, y2);<br />test.printBoard(pieces);<br />cont = input.next().charAt(0);<br />test.printSpaces();<br />}<br /><br />else {<br />System.out.println("NO MATCH. PLEASE CONTINUE");<br />test.printTempBoard(pieces, x1, y1, x2, y2);<br />cont = input.next().charAt(0);<br />test.reverseBoard(pieces, x1, y1, x2, y2);<br />test.printSpaces();<br />}<br /><br /><br />}<br />for (int i = 0; i &lt; 10; i++) {<br />System.out.println();<br />}<br />System.out.println("YOU WIN!!");<br /><br /><br />input.close();<br />}<br />}</p>
@@ -234,10 +251,10 @@
 			    </div>
 			  </div>
 
-			  <div class="card border-dark">
+			  <div id="aBorder3" class="card border-dark">
 			    <div class="card-header bg-secondary" id="headingThree">
 			      <h5 class="mb-0">
-			        <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			        <button class="btn btn-link text-white collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 			          Doubly Linked List
 			        </button>
 			      </h5>
@@ -246,8 +263,8 @@
 						<p class="bg-primary text-light p-3 mb-0">
 							This code is from an assignment where I was tasked with implementing a Doubly Linked List in C#. The following code contains a Node class in addition to a DoublyLinkedList class.
 						</p2>
-						<div class="card-body bg-dark mt-0">
-							<h4 class="text-light">Doubly Linked List Class</h4>
+						<div id="card3" class="card-body text-light bg-dark mt-0">
+							<h4>Doubly Linked List Class</h4>
 							<p>using System;<br />using System.Collections.Generic;<br />using System.Linq;<br />using System.Text;<br />using System.Threading.Tasks;</p>
 							<p>namespace Project3<br />{<br />class DoublyLinkedList<br />{<br />private Node head = null;</p>
 							<p>// Insert node at the beginning of the list<br />public void InsertFirst(DoublyLinkedList list, double input)<br />{<br />Node insertedNode = new Node(input);<br />insertedNode.next = list.head;<br />list.head = insertedNode;<br />insertedNode.previous = null;<br />}</p>

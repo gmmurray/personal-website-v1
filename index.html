@@ -4,16 +4,28 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css\bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<link rel="shortcut icon" href="images\shortcut_icon1.png"/>
+<script>
+	$(document).ready(function(){
+		$("#theme").click(function(){
+			$("#text1, #text2, #text3").toggleClass('text-dark text-light');
+			$("#head1, #head2, #head3").toggleClass('text-light');
+			$("#background, #navbar").toggleClass('bg-white');
+			$("#sec2").toggleClass('bg-dark');
+			$("#theme").toggleClass('text-white text-light');
+		});
+	});
+</script>
 	<title>Jacksonville, FL Computing Student</title>
 </head>
-<body>
 
-	<nav class="navbar navbar-expand-sm">
+<body id="background">
+	<nav id="navbar" class="navbar navbar-expand-sm">
 		<img src="images\logo_3.1.png">
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
@@ -24,6 +36,10 @@
 			</li>
 			<li class="nav-item">
 				<a class="nav-link text-dark font-weight-bold" href="work.html">My Work</a>
+			</li>
+			<li class="nav-item">
+				<a id="theme" class="nav-link text-white font-weight-bold" href="#">Theme</a>
+			</li>
 		</ul>
 	</nav>
 
@@ -40,13 +56,13 @@
 		</div>
 	</div>
 
-	<div class="container-fluid mt-0 pb-4 pt-4 mt-5 mb-4">
+	<div id="section1" class="container-fluid mt-0 pb-4 pt-4 mt-5 mb-4">
 		<div class="mx-auto" style="width:60%">
-				<h4>What do I want to achieve?</h4>
+				<h4 id="head1">What do I want to achieve?</h4>
 		</div>
 
 		<div class="mx-auto" style="width:60%">
-			<p class="text-dark">
+			<p id ="text1" class="text-dark">
 				I want to create and improve technology, applying my analytical and logical
 				nature to the field of computer science. My career interests include
 				software and web development, and my current goal is to learn more about
@@ -55,14 +71,14 @@
 		</div>
 	</div>
 
-	<div class="container-fluid bg-light mt-0 pb-4 pt-4 mt- mb-4">
+	<div id="sec2" class="container-fluid bg-light mt-0 pb-4 pt-4 mt- mb-4">
 		<div class="mx-auto" style="width:60%">
-			<h4>Experiences</h4>
+			<h4 id="head2">Experiences</h4>
 		</div>
 
 		<div class="mx-auto" style="width:60%">
-			<p class="text-dark">
-				Through my studies both at the University of Florida where I received my
+			<p id="text2"class="text-dark">
+				By taking classes both at the University of Florida where I received my
 				bachelor's degree in Anthropology and the University of North Florida, I have
 				been fortunate to learn about several different aspects of computer science
 				including web development, visual and procedural programming, and object
@@ -74,11 +90,11 @@
 
 	<div class="container-fluid mt-0 pb-4 pt-4 mt-5 mb-4">
 		<div class="mx-auto" style="width:60%">
-			<h4>Code</h4>
+			<h4 id="head3">Code</h4>
 		</div>
 
 		<div class="mx-auto" style="width:60%">
-			<p class="text-dark">
+			<p id="text3" class="text-dark">
 				Through my studies, I have experience working with ASP.NET, C#, HTML and CSS in Visual Studio
 				as well as Java in Eclipse. Here is some of the work I have done.
 			</p>
