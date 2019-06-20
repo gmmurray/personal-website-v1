@@ -307,21 +307,22 @@
 			© 2019 Copyright Greg Murray
   	</div>
 	</footer>
+	<script type="text/javascript">
+		window.onscroll = function() {scrollFunction()};
+		function scrollFunction() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				document.getElementById("topBtn").style.display = "block";
+			}
+			else {
+				document.getElementById("topBtn").style.display = "none";
+			}
+		}
+		function topFunction() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}
+		</script>
 </body>
 </html>
 
-<script type="text/javascript">
-window.onscroll = function() {scrollFunction()};
-function scrollFunction() {
-	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		document.getElementById("topBtn").style.display = "block";
-	}
-	else {
-		document.getElementById("topBtn").style.display = "none";
-	}
-}
-function topFunction() {
-	document.body.scrollTop = 0;
-	document.documentElement.scrollTop = 0;
-}
-</script>
+
